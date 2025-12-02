@@ -13,3 +13,13 @@ body {
   color: var(--foreground);
   font-family: var(--font-goorm), sans-serif;
 }
+
+/* 드롭다운 스크롤바 숨기기 */
+select::-webkit-scrollbar {
+  display: none;
+}
+
+select {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
