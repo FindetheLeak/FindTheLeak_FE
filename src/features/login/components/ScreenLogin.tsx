@@ -32,7 +32,7 @@ export default function ScreenLogin() {
         {LOGIN_PROVIDERS.map((provider) => (
           <Link
             key={provider.id}
-            href="/onboarding"
+            href="/register"
             className="flex h-[56px] w-[400px] items-center justify-center gap-5 rounded-[16px] border border-[#DADCE0]"
             style={{
               backgroundColor: provider.bgColor,
