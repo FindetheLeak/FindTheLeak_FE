@@ -4,12 +4,12 @@ import Button from "@/components/ui/Button";
 
 interface Step4CompleteProps {
   nickname: string;
-  onLogin: () => void;
+  onMyPage: () => void;
 }
 
 export default function Step4Complete({
   nickname,
-  onLogin,
+  onMyPage,
 }: Step4CompleteProps) {
   return (
     <div className="flex w-[444px] flex-col items-center gap-12">
@@ -57,7 +57,7 @@ export default function Step4Complete({
         </div>
       </div>
 
-      <Button variant="primary" onClick={onLogin} className="w-[400px]">
+      <Button variant="primary" onClick={onMyPage} className="w-[400px]">
         마이페이지로 가기
       </Button>
     </div>

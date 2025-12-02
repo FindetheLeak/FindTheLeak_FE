@@ -3,6 +3,7 @@ interface InputProps {
   value?: string;
   onChange?: (value: string) => void;
   prefix?: string;
+  size?: "default" | "small";
 }
 
 export default function Input({
@@ -10,9 +11,14 @@ export default function Input({
   value,
   onChange,
   prefix,
+  size = "default",
 }: InputProps) {
+  const heightClass = size === "small" ? "h-[24px]" : "h-[49px]";
+
   return (
-    <div className="flex h-[49px] w-full items-center gap-2 rounded-lg border border-[#BDC1C6] bg-[#E1E3E7] px-4 py-3">
+    <div
+      className={`flex ${heightClass} w-full items-center gap-2 rounded-lg border border-[#BDC1C6] bg-[#E1E3E7] px-4 py-3`}
+    >
       {prefix && (
         <span className="text-sm leading-[160%] text-black">{prefix}</span>
       )}

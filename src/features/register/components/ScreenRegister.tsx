@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import ProgressBar from "@/components/ui/ProgressBar";
+import ProgressBar from "@/features/register/components/ProgressBar";
 import Footer from "@/components/ui/Footer";
 import Step1Terms from "@/features/register/components/Step1Terms";
 import Step2AccountType from "@/features/register/components/Step2AccountType";
@@ -59,8 +59,8 @@ export default function ScreenRegister() {
     navigateToStep(4);
   };
 
-  const handleLogin = () => {
-    router.push("/");
+  const handleMyPage = () => {
+    router.push("/mypage");
   };
 
   const progressLabels = ["약관동의", "계정 설정", "기본 정보"];
@@ -96,7 +96,10 @@ export default function ScreenRegister() {
             />
           )}
           {currentStep === 4 && (
-            <Step4Complete nickname={formData.nickname} onLogin={handleLogin} />
+            <Step4Complete
+              nickname={formData.nickname}
+              onMyPage={handleMyPage}
+            />
           )}
         </div>
       </div>
