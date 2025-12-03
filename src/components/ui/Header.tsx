@@ -2,8 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    return pathname.startsWith(path);
+  };
+
   return (
     <header className="flex h-[100px] w-full items-center justify-center gap-2.5 border-b border-[#BDC1C6] bg-[#F8F9FA] px-10 py-6">
       <div className="flex w-full max-w-[1360px] shrink-0 items-center justify-between">
@@ -20,25 +27,37 @@ export default function Header() {
           <nav className="flex items-center gap-[57px]">
             <Link
               href="/mypage"
-              className="text-base leading-[100%] text-[#3B82F6]"
+              className={`text-base leading-[100%] ${
+                isActive("/mypage") && !pathname.includes("type=company")
+                  ? "text-[#3B82F6]"
+                  : "text-[#5F6368]"
+              }`}
             >
               대시보드
             </Link>
             <Link
-              href="/programs"
-              className="text-base leading-[100%] text-[#5F6368]"
+              href="/mypage?type=company"
+              className={`text-base leading-[100%] ${
+                pathname.includes("type=company")
+                  ? "text-[#3B82F6]"
+                  : "text-[#5F6368]"
+              }`}
             >
               프로그램
             </Link>
             <Link
               href="/leaderboard"
-              className="text-base leading-[100%] text-[#5F6368]"
+              className={`text-base leading-[100%] ${
+                isActive("/leaderboard") ? "text-[#3B82F6]" : "text-[#5F6368]"
+              }`}
             >
               리더보드
             </Link>
             <Link
               href="/notices"
-              className="text-base leading-[100%] text-[#5F6368]"
+              className={`text-base leading-[100%] ${
+                isActive("/notices") ? "text-[#3B82F6]" : "text-[#5F6368]"
+              }`}
             >
               공지사항
             </Link>
