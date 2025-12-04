@@ -26,7 +26,7 @@ export default function Step4Complete({
 
           <div className="flex w-[241.5px] flex-col items-start gap-2">
             <div className="relative h-10 self-stretch">
-              <div className="absolute left-[101px] top-0 flex aspect-square h-10 w-10 flex-col items-center justify-center gap-[13.333px] rounded-full bg-[#3B82F6]">
+              <div className="absolute top-0 left-[101px] flex aspect-square h-10 w-10 flex-col items-center justify-center gap-[13.333px] rounded-full bg-[#3B82F6]">
                 <svg
                   width="24"
                   height="24"

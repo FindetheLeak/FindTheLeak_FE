@@ -60,7 +60,7 @@ export default function ScreenRegister() {
   };
 
   const handleMyPage = () => {
-    router.push("/mypage");
+    router.push(`/mypage?type=${accountType}`);
   };
 
   const progressLabels = ["약관동의", "계정 설정", "기본 정보"];

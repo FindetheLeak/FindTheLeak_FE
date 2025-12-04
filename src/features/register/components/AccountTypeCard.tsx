@@ -23,10 +23,10 @@ export default function AccountTypeCard({
       }`}
     >
       <div className="flex w-[207px] flex-col items-center gap-4">
-        <span className="self-stretch text-center text-xl leading-normal font-[400] text-[#3B82F6] font-[400]">
+        <span className="self-stretch text-center text-xl leading-normal font-[400] text-[#3B82F6]">
           {title}
         </span>
-        <p className="self-stretch text-center text-xs leading-[160%] whitespace-pre-line text-[#80868B] font-[400]">
+        <p className="self-stretch text-center text-xs leading-[160%] font-[400] whitespace-pre-line text-[#80868B]">
           {description}
         </p>
       </div>

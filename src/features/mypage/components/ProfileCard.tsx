@@ -23,9 +23,7 @@ export default function ProfileCard({ isEditing, onEdit }: ProfileCardProps) {
   };
 
   const handleCancel = () => {
-    setBio(
-      "자기 소개를 수정해주세요."
-    );
+    setBio("자기 소개를 수정해주세요.");
     setEmail("example@gmail.com");
     setGithub("example");
     setAccountNumber("**********0369");
