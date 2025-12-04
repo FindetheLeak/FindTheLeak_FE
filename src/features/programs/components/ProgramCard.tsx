@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 interface ProgramCardProps {
+  id: number;
   title: string;
   company: string;
   logo: string;
@@ -12,6 +15,7 @@ interface ProgramCardProps {
 }
 
 export default function ProgramCard({
+  id,
   title,
   company,
   logo,
@@ -29,7 +33,7 @@ export default function ProgramCard({
   const isClosing = badges.includes("마감 임박");
 
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-[#E8EAED] bg-white px-[25px] pb-1 pt-[25px] shadow-[0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]">
+    <div className="flex flex-col gap-4 rounded-2xl border border-[#E8EAED] bg-white px-[25px] pt-[25px] pb-1 shadow-[0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]">
       <div className="flex gap-4">
         <img
           src={logo}
@@ -38,9 +42,7 @@ export default function ProgramCard({
         />
         <div className="flex flex-1 flex-col gap-2">
           <h3 className="text-base leading-[150%] text-[#0A0A0A]">{title}</h3>
-          <p className="text-sm leading-[142.857%] text-[#9AA0A6]">
-            {company}
-          </p>
+          <p className="text-sm leading-[142.857%] text-[#9AA0A6]">{company}</p>
           <div className="flex gap-2">
             {types.map((type) => (
               <span
@@ -288,11 +290,12 @@ export default function ProgramCard({
 
       <p className="text-sm leading-[162.5%] text-[#5F6368]">{description}</p>
 
-      <button className="flex items-center justify-center rounded-lg bg-[#3B82F6] py-2">
-        <span className="text-sm leading-[142.857%] text-white">
-          상세 보기
-        </span>
-      </button>
+      <Link
+        href={`/programs/${id}`}
+        className="flex items-center justify-center rounded-lg bg-[#3B82F6] py-2"
+      >
+        <span className="text-sm leading-[142.857%] text-white">상세 보기</span>
+      </Link>
     </div>
   );
 }
