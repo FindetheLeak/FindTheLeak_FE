@@ -1,14 +1,11 @@
-"use client";
+import Header from "@/components/ui/Header";
+import ScreenProgram from "@/features/programs/components/ScreenProgram";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-
-export default function ProgramPage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace("/mypage?type=company");
-  }, [router]);
-
-  return null;
+export default function ProgramsPage() {
+  return (
+    <div className="flex min-h-screen flex-col bg-[#F8F9FA]">
+      <Header />
+      <ScreenProgram />
+    </div>
+  );
 }

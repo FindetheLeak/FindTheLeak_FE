@@ -36,9 +36,9 @@ export default function Header() {
               대시보드
             </Link>
             <Link
-              href="/mypage?type=company"
+              href="/programs"
               className={`text-base leading-[100%] ${
-                pathname.includes("type=company")
+                pathname.includes("programs")
                   ? "text-[#3B82F6]"
                   : "text-[#5F6368]"
               }`}
