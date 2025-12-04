@@ -65,7 +65,7 @@ export default function Step1Terms({ onNext, onCancel }: Step1TermsProps) {
                 onChange={(checked) => handleIndividualChange(term.id, checked)}
               />
               <div className="flex items-center gap-2">
-                <span className="text-base leading-[140%] text-black font-[400]">
+                <span className="text-base leading-[140%] font-[400] text-black">
                   <span className="underline">{term.label}</span> 동의
                 </span>
                 {term.required && (

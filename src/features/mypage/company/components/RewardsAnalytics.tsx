@@ -159,9 +159,7 @@ export default function RewardsAnalytics() {
             <p className="text-sm leading-[142.857%] text-[#9AA0A6]">
               평균 리워드 금액 (1건당)
             </p>
-            <p className="text-base leading-[150%] text-[#3C4043]">
-              ₩ 266,667
-            </p>
+            <p className="text-base leading-[150%] text-[#3C4043]">₩ 266,667</p>
             <p className="text-xs leading-[133.333%] text-[#9AA0A6]">
               최근 3개월 기준
             </p>

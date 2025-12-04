@@ -9,7 +9,8 @@ const announcements = [
     date: "2024-12-01",
     badge: "이벤트",
     badgeColor: "bg-[#DCFCE7] text-[#008236]",
-    preview: "12월 한 달간 Critical 취약점 발견 시 보상금이 2배로 지급됩니다...",
+    preview:
+      "12월 한 달간 Critical 취약점 발견 시 보상금이 2배로 지급됩니다...",
   },
   {
     id: 2,
@@ -35,8 +36,12 @@ export default function ProgramAnnouncements() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h2 className="text-base leading-6 text-[#0A0A0A]">프로그램 공지사항</h2>
-        <p className="text-sm leading-5 text-[#5F6368]">기업이 연구자에게 전달하는 중요 안내사항입니다.</p>
+        <h2 className="text-base leading-6 text-[#0A0A0A]">
+          프로그램 공지사항
+        </h2>
+        <p className="text-sm leading-5 text-[#5F6368]">
+          기업이 연구자에게 전달하는 중요 안내사항입니다.
+        </p>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -46,9 +51,15 @@ export default function ProgramAnnouncements() {
             className="flex flex-col gap-3 rounded-[10px] border border-[#E8EAED] p-5"
           >
             <div className="flex items-start justify-between">
-              <h3 className="text-lg leading-[27px] text-[#0A0A0A]">{announcement.title}</h3>
+              <h3 className="text-lg leading-[27px] text-[#0A0A0A]">
+                {announcement.title}
+              </h3>
               <button
-                onClick={() => setExpandedId(expandedId === announcement.id ? null : announcement.id)}
+                onClick={() =>
+                  setExpandedId(
+                    expandedId === announcement.id ? null : announcement.id
+                  )
+                }
                 className="flex h-5 w-5 items-center justify-center"
               >
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -95,14 +106,20 @@ export default function ProgramAnnouncements() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="text-sm leading-5 text-[#9AA0A6]">{announcement.date}</span>
+                <span className="text-sm leading-5 text-[#9AA0A6]">
+                  {announcement.date}
+                </span>
               </div>
-              <span className={`rounded-lg px-2 py-0.5 text-xs leading-4 ${announcement.badgeColor}`}>
+              <span
+                className={`rounded-lg px-2 py-0.5 text-xs leading-4 ${announcement.badgeColor}`}
+              >
                 {announcement.badge}
               </span>
             </div>
 
-            <p className="text-sm leading-[22.75px] text-[#5F6368]">{announcement.preview}</p>
+            <p className="text-sm leading-[22.75px] text-[#5F6368]">
+              {announcement.preview}
+            </p>
           </div>
         ))}
       </div>

@@ -8,8 +8,12 @@ export default function ProgramScope() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h2 className="text-base leading-6 text-[#0A0A0A]">취약점 제보 대상 (In-Scope)</h2>
-        <p className="text-sm leading-5 text-[#5F6368]">아래 자산에서 발견된 취약점만 보상 대상입니다.</p>
+        <h2 className="text-base leading-6 text-[#0A0A0A]">
+          취약점 제보 대상 (In-Scope)
+        </h2>
+        <p className="text-sm leading-5 text-[#5F6368]">
+          아래 자산에서 발견된 취약점만 보상 대상입니다.
+        </p>
       </div>
 
       {/* 웹 서비스 */}
@@ -40,18 +44,38 @@ export default function ProgramScope() {
               />
             </g>
           </svg>
-          <h3 className="text-base leading-6 text-[#0A0A0A]">웹 서비스 (Web)</h3>
+          <h3 className="text-base leading-6 text-[#0A0A0A]">
+            웹 서비스 (Web)
+          </h3>
         </div>
 
         <div className="flex flex-col gap-3">
           {[
-            { url: "https://www.abc.com", type: "웹사이트", desc: "메인 웹사이트" },
-            { url: "https://api.abc.com", type: "API", desc: "REST API 엔드포인트" },
-            { url: "https://admin.abc.com", type: "관리자 페이지", desc: "로그인 필요, 테스트 계정 제공" },
+            {
+              url: "https://www.abc.com",
+              type: "웹사이트",
+              desc: "메인 웹사이트",
+            },
+            {
+              url: "https://api.abc.com",
+              type: "API",
+              desc: "REST API 엔드포인트",
+            },
+            {
+              url: "https://admin.abc.com",
+              type: "관리자 페이지",
+              desc: "로그인 필요, 테스트 계정 제공",
+            },
           ].map((item, index) => (
-            <div key={index} className="flex flex-col gap-2 rounded-[10px] border border-[#E8EAED] p-4">
+            <div
+              key={index}
+              className="flex flex-col gap-2 rounded-[10px] border border-[#E8EAED] p-4"
+            >
               <div className="flex items-center gap-2">
-                <a href={item.url} className="font-mono text-base leading-6 text-[#3B82F6]">
+                <a
+                  href={item.url}
+                  className="font-mono text-base leading-6 text-[#3B82F6]"
+                >
                   {item.url}
                 </a>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -82,7 +106,9 @@ export default function ProgramScope() {
                 <span className="rounded-lg border border-[#E8EAED] px-2 py-0.5 text-xs leading-4 text-[#0A0A0A]">
                   {item.type}
                 </span>
-                <span className="text-sm leading-5 text-[#9AA0A6]">{item.desc}</span>
+                <span className="text-sm leading-5 text-[#9AA0A6]">
+                  {item.desc}
+                </span>
               </div>
             </div>
           ))}
@@ -108,20 +134,35 @@ export default function ProgramScope() {
               strokeLinejoin="round"
             />
           </svg>
-          <h3 className="text-base leading-6 text-[#0A0A0A]">모바일 앱 (Mobile App)</h3>
+          <h3 className="text-base leading-6 text-[#0A0A0A]">
+            모바일 앱 (Mobile App)
+          </h3>
         </div>
 
         <div className="flex flex-col gap-3">
           {[
-            { name: "ABC Shopping (Android)", packageId: "com.abc.shopping", version: "v3.0+" },
-            { name: "ABC Shopping (iOS)", packageId: "App Store", version: "v3.0+" },
+            {
+              name: "ABC Shopping (Android)",
+              packageId: "com.abc.shopping",
+              version: "v3.0+",
+            },
+            {
+              name: "ABC Shopping (iOS)",
+              packageId: "App Store",
+              version: "v3.0+",
+            },
           ].map((app, index) => (
-            <div key={index} className="flex flex-col gap-2 rounded-[10px] border border-[#E8EAED] p-4">
+            <div
+              key={index}
+              className="flex flex-col gap-2 rounded-[10px] border border-[#E8EAED] p-4"
+            >
               <h4 className="text-base leading-6 text-[#0A0A0A]">{app.name}</h4>
               <div className="flex flex-col gap-1">
                 <p className="text-sm leading-5">
                   <span className="text-[#9AA0A6]">Package/Bundle ID: </span>
-                  <span className="font-mono text-[#5F6368]">{app.packageId}</span>
+                  <span className="font-mono text-[#5F6368]">
+                    {app.packageId}
+                  </span>
                 </p>
                 <p className="text-sm leading-5">
                   <span className="text-[#9AA0A6]">Version: </span>
@@ -152,7 +193,9 @@ export default function ProgramScope() {
               strokeLinejoin="round"
             />
           </svg>
-          <h3 className="text-base leading-6 text-[#0A0A0A]">오픈소스 (Open Source / Git)</h3>
+          <h3 className="text-base leading-6 text-[#0A0A0A]">
+            오픈소스 (Open Source / Git)
+          </h3>
         </div>
 
         <div className="flex flex-col gap-2 rounded-[10px] border border-[#E8EAED] p-4">
@@ -191,7 +234,9 @@ export default function ProgramScope() {
             </p>
             <p className="text-sm leading-5">
               <span className="text-[#9AA0A6]">Scope: </span>
-              <span className="text-[#5F6368]">/src/* 디렉토리만 해당, /tests/* 제외</span>
+              <span className="text-[#5F6368]">
+                /src/* 디렉토리만 해당, /tests/* 제외
+              </span>
             </p>
           </div>
         </div>
@@ -203,7 +248,9 @@ export default function ProgramScope() {
           onClick={() => setOutOfScopeExpanded(!outOfScopeExpanded)}
           className="flex items-center justify-between"
         >
-          <h3 className="text-base leading-6 text-[#E7000B]">제외 범위 (Out-of-Scope)</h3>
+          <h3 className="text-base leading-6 text-[#E7000B]">
+            제외 범위 (Out-of-Scope)
+          </h3>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
               d="M5 7.5L10 12.5L15 7.5"

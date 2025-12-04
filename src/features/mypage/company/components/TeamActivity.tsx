@@ -3,36 +3,31 @@ export default function TeamActivity() {
     {
       user: "KB",
       name: "김보안",
-      action:
-        "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
+      action: "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
       time: "10분 전",
     },
     {
       user: "KB",
       name: "김보안",
-      action:
-        "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
+      action: "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
       time: "10분 전",
     },
     {
       user: "KB",
       name: "김보안",
-      action:
-        "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
+      action: "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
       time: "10분 전",
     },
     {
       user: "KB",
       name: "김보안",
-      action:
-        "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
+      action: "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
       time: "10분 전",
     },
     {
       user: "KB",
       name: "김보안",
-      action:
-        "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
+      action: "ABC 메인 웹 서비스의 제보 #VUL-2024-001을 Triage 상태로 변경",
       time: "10분 전",
     },
   ];

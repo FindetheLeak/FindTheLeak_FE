@@ -22,7 +22,8 @@ export default function KPISummary() {
       bgColor: "bg-[rgba(59,130,246,0.08)]",
       label: "진행 중 프로그램",
       value: "3",
-      description: "초안 / 비공개 / 공개 상태 구분은 프로그램 관리에서 확인 가능",
+      description:
+        "초안 / 비공개 / 공개 상태 구분은 프로그램 관리에서 확인 가능",
     },
     {
       icon: (
