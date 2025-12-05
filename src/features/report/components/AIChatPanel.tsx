@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 export default function AIChatPanel({
   onAnalyze,
@@ -13,7 +14,7 @@ export default function AIChatPanel({
     {
       role: "ai",
       content:
-        "안녕하세요! 취약점 제보를 도와드리겠습니다. 어떤 프로그램에 대한 취약점을 발견하셨나요?",
+        "안녕하세요! 리포트 작성을 도와드리겠습니다. POC(취약점 증명)코드를 입력해주세요.",
     },
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -227,29 +228,14 @@ export default function AIChatPanel({
             </div>
 
             {msg.role === "user" && (
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#E8EAED]">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12.6663 14V12.6667C12.6663 11.9594 12.3854 11.2811 11.8853 10.781C11.3852 10.281 10.7069 10 9.99967 10H5.99967C5.29243 10 4.61415 10.281 4.11406 10.781C3.61396 11.2811 3.33301 11.9594 3.33301 12.6667V14"
-                    stroke="#5F6368"
-                    strokeWidth="1.33333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M7.99967 7.33333C9.47243 7.33333 10.6663 6.13943 10.6663 4.66667C10.6663 3.19391 9.47243 2 7.99967 2C6.52692 2 5.33301 3.19391 5.33301 4.66667C5.33301 6.13943 6.52692 7.33333 7.99967 7.33333Z"
-                    stroke="#5F6368"
-                    strokeWidth="1.33333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full">
+                <Image
+                  src="/user-avatar.png"
+                  alt="User Avatar"
+                  width={32}
+                  height={32}
+                  className="h-full w-full object-cover"
+                />
               </div>
             )}
           </div>

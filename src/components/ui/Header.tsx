@@ -66,7 +66,7 @@ export default function Header() {
         <div className="flex items-center justify-end gap-6">
           <div className="h-10 w-10 overflow-hidden rounded-full bg-[#DADCE0]">
             <Image
-              src="/logo.svg"
+              src="/user-avatar.png"
               alt="Profile"
               width={40}
               height={40}

@@ -45,7 +45,7 @@ export default function ScreenReport() {
       setReferences(
         "https://logging.apache.org/log4j/2.x/security.html\nhttps://nvd.nist.gov/vuln/detail/CVE-2021-44228"
       );
-    }, 3000);
+    }, 10000);
   };
 
   const handleSubmit = () => {

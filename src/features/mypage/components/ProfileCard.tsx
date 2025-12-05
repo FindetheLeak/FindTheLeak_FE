@@ -37,7 +37,7 @@ export default function ProfileCard({ isEditing, onEdit }: ProfileCardProps) {
         <div className="flex items-stretch gap-10 self-stretch">
           <div className="h-52 w-52 overflow-hidden rounded-full bg-[#DADCE0]">
             <Image
-              src="/logo.svg"
+              src="/user-avatar.png"
               alt="User Avatar"
               width={208}
               height={208}
