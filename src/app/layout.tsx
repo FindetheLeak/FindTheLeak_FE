@@ -5,17 +5,17 @@ import "./globals.css";
 const goormSans = localFont({
   src: [
     {
-      path: "./fonts/goorm-sans-regular.otf",
+      path: "../../public/fonts/goorm-sans-regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/goorm-sans-medium.otf",
+      path: "../../public/fonts/goorm-sans-medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/goorm-sans-bold.otf",
+      path: "../../public/fonts/goorm-sans-bold.otf",
       weight: "700",
       style: "normal",
     },
@@ -36,11 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className={`${goormSans.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${goormSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }

@@ -56,11 +56,7 @@ export default function ScreenLogin() {
         {LOGIN_PROVIDERS.map((provider) => (
           <button
             key={provider.id}
-<<<<<<< Updated upstream
-            href="/onboarding"
-=======
             onClick={() => handleLogin(provider.id)}
->>>>>>> Stashed changes
             className="flex h-[56px] w-[400px] items-center justify-center gap-5 rounded-[16px] border border-[#DADCE0]"
             style={{
               backgroundColor: provider.bgColor,
