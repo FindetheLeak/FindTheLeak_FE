@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const LOGIN_PROVIDERS = [
   {
@@ -19,6 +22,27 @@ const LOGIN_PROVIDERS = [
 ] as const;
 
 export default function ScreenLogin() {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleLogin = (providerId: string) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      router.push("/register");
+    }, 2000);
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex h-screen flex-col items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-[#E8EAED] border-t-[#3B82F6]"></div>
+          <span className="text-[16px] text-[#5F6368]">로그인 중...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <span className="text-[32px] font-[400] text-[#5F6368]">
@@ -30,9 +54,13 @@ export default function ScreenLogin() {
       </span>
       <div className="flex flex-col gap-5">
         {LOGIN_PROVIDERS.map((provider) => (
-          <Link
+          <button
             key={provider.id}
+<<<<<<< Updated upstream
             href="/onboarding"
+=======
+            onClick={() => handleLogin(provider.id)}
+>>>>>>> Stashed changes
             className="flex h-[56px] w-[400px] items-center justify-center gap-5 rounded-[16px] border border-[#DADCE0]"
             style={{
               backgroundColor: provider.bgColor,
@@ -46,7 +74,7 @@ export default function ScreenLogin() {
               alt={provider.id}
             />
             {provider.name}
-          </Link>
+          </button>
         ))}
       </div>
     </div>
